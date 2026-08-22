@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --translucentWhite: #edededb0;
+  --custom-neutral: #525252;
 }
 
 @theme inline {
@@ -10,6 +12,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-translucent-white: var(--translucentWhite);
+  --color-custom-neutral: var(--custom-neutral);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +24,14 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--foreground);
+  color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  padding-inline: 15px;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
+
+/* * {
+  outline: 1px solid red !important;
+} */

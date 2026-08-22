@@ -1,36 +1,170 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mykhailo Loniak — Developer Portfolio
 
-## Getting Started
+A personal developer portfolio built with Next.js and TypeScript. It presents my full-stack projects, technical skills, certificates, professional background, and contact information in a terminal-inspired interface.
 
-First, run the development server:
+> The new production URL will be added after deployment.
+
+## Overview
+
+The portfolio is designed to give recruiters and development teams a clear overview of:
+
+- the applications I have built;
+- the technologies I use;
+- my approach to frontend and backend development;
+- verified course certificates;
+- ways to contact me or view my code.
+
+The content is stored in typed data files, making it straightforward to add new projects and certificates without duplicating component markup.
+
+## Main sections
+
+- **Hero** — short professional introduction and primary actions.
+- **Projects** — featured work with screenshots, technology stacks, source code, and live-demo links.
+- **About** — background, development approach, and current focus.
+- **Skills** — frontend, backend, database, authentication, and development tools.
+- **Certificates** — Mate Academy certificates with links to the original documents.
+- **Contact** — email, GitHub, LinkedIn, and CV access.
+
+## Tech stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Embla Carousel
+- React Icons
+
+## Project structure
+
+```text
+app/
+├── components/          # Page sections and reusable UI components
+├── globals.css          # Global styles and theme variables
+├── layout.tsx           # Root layout, fonts, and metadata
+└── page.tsx             # Portfolio section composition
+
+lib/
+├── projects.ts          # Typed project data
+└── certificates.ts      # Typed certificate data
+
+public/
+├── certificates/        # Certificate preview images
+├── cv/                  # Downloadable CV files
+└── screen/              # Project screenshots
+```
+
+## Getting started
+
+### Requirements
+
+- Node.js supported by the installed Next.js version
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/MykhailoLoniak/portfolio.git
+cd portfolio
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Quality checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+### Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding a project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Add an optimized screenshot to `public/screen/`.
+2. Add a new object to `lib/projects.ts`.
+3. Include only working public URLs.
 
-## Deploy on Vercel
+Example:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```ts
+{
+  id: "project-slug",
+  src: "/screen/project-preview.webp",
+  name: "Project name",
+  description: "A short explanation of the problem and the solution.",
+  stack: ["Next.js", "Node.js", "PostgreSQL"],
+  links: [
+    {
+      name: "Live demo",
+      link: "https://example.com",
+    },
+    {
+      name: "Source code",
+      link: "https://github.com/username/repository",
+    },
+  ],
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use WebP or AVIF previews where possible and keep project images reasonably small.
+
+## Adding a certificate
+
+1. Add the preview image to `public/certificates/`.
+2. Add its data to `lib/certificates.ts`.
+3. Link to the original certificate when a verified public URL is available.
+
+## Featured project
+
+### Ranok Coffee
+
+A responsive full-stack coffee-shop application with a multi-step table-reservation form and a booking-management dashboard.
+
+**Technologies:** Next.js, React, Node.js, Express, PostgreSQL, Tailwind CSS and Axios.
+
+- [Live demo](https://front-end-coffee-booking.vercel.app/)
+- [Frontend repository](https://github.com/MykhailoLoniak/front-end_coffee_booking)
+- [Backend repository](https://github.com/MykhailoLoniak/back-end_coffee_booking)
+
+The dashboard link should only be published after the backend deployment and access protection have been verified.
+
+## Deployment
+
+The recommended deployment target is Vercel:
+
+1. Push the project to GitHub.
+2. Import the repository into Vercel.
+3. Confirm that `npm run build` succeeds.
+4. Deploy the production branch.
+5. Add the resulting URL to this README and the GitHub repository homepage.
+
+## Planned improvements
+
+- Add the final production URL and social preview image.
+- Add downloadable English and Spanish CV files.
+- Add more full-stack projects and short case studies.
+- Add automated lint, type-check, and build checks with GitHub Actions.
+- Improve accessibility and reduced-motion support.
+- Add tests for data integrity and critical interactions.
+
+## Contact
+
+- **Email:** [loniakmykhail@gmail.com](mailto:loniakmykhail@gmail.com)
+- **GitHub:** [MykhailoLoniak](https://github.com/MykhailoLoniak)
+- **LinkedIn:** [mykhailo-loniak](https://www.linkedin.com/in/mykhailo-loniak/)
+
+## License
+
+The source code is available for portfolio and educational review. If you want others to reuse or modify it, add an explicit open-source license such as MIT.
