@@ -1,4 +1,3 @@
-import React from "react";
 import { Console } from "./Console";
 import { CodeComment } from "./CodeComment";
 import { Line } from "./Line";
@@ -12,18 +11,18 @@ export const Projects = () => {
   return (
     <>
       <section id="projects" className="mt-10">
-        <CodeComment>Projects</CodeComment>
+        <CodeComment>projects</CodeComment>
         <Console folder="~/hero/projects $" />
 
         {projects.map((p) => (
-          <div
+          <article
             key={p.id}
             className="border border-custom-neutral p-2 rounded-md mt-10 bg-gray-800"
           >
             <h3 className="text-xl font-bold">{p.name}</h3>
             <p>{p.description}</p>
 
-            <div className="flex justify-end w-full flex gap-2 mb-2">
+            <div className="flex flex-wrap justify-end w-full gap-2 mb-2">
               {p.stack.map((s) => (
                 <span key={s} className="border px-2 py-1 rounded-md">
                   {s}
@@ -41,10 +40,11 @@ export const Projects = () => {
               />
             </div>
 
-            <div className="flex gap-2 mt-10">
+            <div className="flex flex-wrap gap-2 mt-10">
               {p.links.map((l) => (
                 <Link
                   key={l.link}
+                  target="_blank"
                   className="flex gap-2 border px-2 py-1 rounded-md items-center"
                   href={l.link}
                 >
@@ -52,7 +52,7 @@ export const Projects = () => {
                 </Link>
               ))}
             </div>
-          </div>
+          </article>
         ))}
       </section>
 

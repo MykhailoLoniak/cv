@@ -59,7 +59,7 @@ export const CertificatesCarousel = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="certificates" className="relative">
+    <section className="relative">
       <div ref={emblaRef} className="overflow-hidden">
         <div className="-ml-4 flex">
           {certificates.map((certificate) => (

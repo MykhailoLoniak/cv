@@ -30,11 +30,11 @@ export const projects = [
         link: "https://github.com/MykhailoLoniak/back-end_coffee_booking",
       },
       {
-        name: "Demo",
+        name: "Live demo",
         link: "https://front-end-coffee-booking.vercel.app",
       },
       {
-        name: "Demo dashboard",
+        name: "Live demo dashboard",
         link: "https://front-end-coffee-booking.vercel.app/dashboard",
       },
     ],

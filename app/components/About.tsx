@@ -1,4 +1,3 @@
-import React from "react";
 import { CodeComment } from "./CodeComment";
 import { Console } from "./Console";
 

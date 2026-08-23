@@ -8,7 +8,7 @@ export const HeroSection = () => {
     <>
       <section id="home" className="mt-10">
         <CodeComment>hero</CodeComment>
-        <Console folder="~/portfolio $" />
+        <Console folder="~/hero $" />
 
         <h1 className="mt-10 max-w-4xl text-4xl font-bold sm:text-5xl lg:text-6xl">
           Junior Full-Stack JavaScript Developer

@@ -1,4 +1,3 @@
-import React from "react";
 import { Console } from "./Console";
 import { CodeComment } from "./CodeComment";
 import { Line } from "./Line";
@@ -24,7 +23,7 @@ export const Skills = () => {
     "frontend": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     "backend": ["Node.js", "Express", "REST API"],
     "database": ["PostgreSQL"],
-    "auth": ["JWT", "0Auth 2.0"],
+    "auth": ["JWT", "OAuth 2.0"],
     "tools": ["Git", "Docker", "Vite", "Webpack"]
 }`}</code>
           </pre>

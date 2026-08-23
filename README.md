@@ -63,8 +63,8 @@ public/
 ### Installation
 
 ```bash
-git clone https://github.com/MykhailoLoniak/portfolio.git
-cd portfolio
+git clone https://github.com/MykhailoLoniak/cv.git
+cd cv
 npm install
 ```
 
@@ -135,10 +135,9 @@ A responsive full-stack coffee-shop application with a multi-step table-reservat
 **Technologies:** Next.js, React, Node.js, Express, PostgreSQL, Tailwind CSS and Axios.
 
 - [Live demo](https://front-end-coffee-booking.vercel.app/)
+- [Live demo dashboard](https://front-end-coffee-booking.vercel.app/dashboard)
 - [Frontend repository](https://github.com/MykhailoLoniak/front-end_coffee_booking)
 - [Backend repository](https://github.com/MykhailoLoniak/back-end_coffee_booking)
-
-The dashboard link should only be published after the backend deployment and access protection have been verified.
 
 ## Deployment
 
@@ -167,4 +166,8 @@ The recommended deployment target is Vercel:
 
 ## License
 
-The source code is available for portfolio and educational review. If you want others to reuse or modify it, add an explicit open-source license such as MIT.
+Copyright © 2026 Mykhailo Loniak. All rights reserved.
+
+This repository is publicly available for portfolio review and educational
+reference. Reuse, redistribution, or publication of the source code is not
+permitted without prior written permission.
