@@ -80,15 +80,15 @@ export const CertificatesCarousel = () => {
                 <Image
                   src={certificate.image}
                   alt={`Сертифікат ${certificate.title}`}
-                  width={1200}
-                  height={850}
+                  width={1059}
+                  height={1050}
                   className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
                 />
 
                 <div className="p-4">
-                  <h3 className="font-mono text-sm text-neutral-200">
+                  <h2 className="font-mono text-sm text-neutral-200">
                     {certificate.title}
-                  </h3>
+                  </h2>
 
                   <span className="mt-2 block font-mono text-xs text-neutral-500">
                     Переглянути сертифікат →
@@ -100,7 +100,6 @@ export const CertificatesCarousel = () => {
         </div>
       </div>
 
-      {/* Панель навігації: Кнопка ←, Точки індикації посредині, Кнопка → */}
       <div className="mt-6 flex items-center justify-center gap-6">
         <button
           type="button"

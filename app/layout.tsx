@@ -75,13 +75,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
       <body className="relative min-h-screen">
-        <LineNumbers />
+        <div className="-mt-20">
+          <LineNumbers />
+        </div>
 
-        <main className="min-h-screen pl-12 relative p-2">
-          <div className="fixed top-0 right-0 left-10 z-99 bg-[var(--background)]">
-            <Header />
-          </div>
-          <div className="mt-10">{children}</div>
+        <div className="fixed top-0 right-0 md:left-11 left-0 z-99 bg-[var(--background)]">
+          <Header />
+        </div>
+
+        <main className="mt-20 min-h-screen md:pl-12 relative p-2">
+          {children}
         </main>
       </body>
     </html>

@@ -1,5 +1,6 @@
 import { CodeComment } from "./CodeComment";
 import { Console } from "./Console";
+import { Line } from "./Line";
 
 export const About = () => {
   return (
@@ -44,6 +45,10 @@ export const About = () => {
           <span>Location</span>
           <p>Madrid, Spain</p>
         </div>
+      </div>
+
+      <div className="mt-10 md:-ml-5">
+        <Line color="var(--custom-neutral)" />
       </div>
     </section>
   );
