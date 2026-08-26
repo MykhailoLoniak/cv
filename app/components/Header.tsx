@@ -19,6 +19,29 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
     const updateActiveSection = () => {
       const viewportBottom = window.scrollY + window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
@@ -94,14 +117,16 @@ const Header = () => {
           href="#contact"
           className="hidden sm:flex gap-2 border rounded-2xl py-1 px-2"
         >
-          <span className="text-green-500 animate-pulse">&#9673;</span>
-          Open to suggestions
+          <span aria-hidden="true" className="text-green-500 animate-pulse">
+            &#9673;
+          </span>
+          Available for workemblaApi
         </Link>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-2xl z-50 relative focus:outline-none"
-          aria-label={isOpen ? "Закрити меню" : "Відкрити меню"}
+          className="md:hidden text-2xl z-50 relative rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
         >
@@ -124,7 +149,7 @@ const Header = () => {
                 href={`#${id}`}
                 aria-current={isActive ? "location" : undefined}
                 onClick={() => setIsOpen(false)}
-                className={`transition-colors ${
+                className={`transition-colors rounded px-2 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 ${
                   isActive
                     ? "text-orange-400"
                     : "text-custom-neutral hover:text-white"

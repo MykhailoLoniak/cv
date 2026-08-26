@@ -18,7 +18,7 @@ export const Projects = () => {
           key={p.id}
           className="border border-custom-neutral p-2 rounded-md mt-10 bg-gray-800"
         >
-          <h2 className="text-xl font-bold">{p.name}</h2>
+          <h3 className="text-xl font-bold">{p.name}</h3>
           <p>{p.description}</p>
 
           <div className="flex flex-wrap justify-end w-full gap-2 mb-2">

@@ -3,8 +3,8 @@ interface CodeCommentProps {
 }
 
 export const CodeComment = ({ children }: CodeCommentProps) => (
-  <p className="font-mono text-sm text-neutral-500">
-    <span>{"// "}</span>
+  <h2 className="font-mono text-sm text-neutral-500">
+    <span aria-hidden="true">{"// "}</span>
     {children}
-  </p>
+  </h2>
 );

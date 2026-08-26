@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LineNumbers } from "./components/LineNumbers";
 import Header from "./components/Header";
+import { BackendWaker } from "./components/BackendWaker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -74,8 +75,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
-      <body className="relative min-h-screen">
-        <div className="-mt-20">
+      <body className="relative min-h-screen max-w-7xl">
+        <BackendWaker />
+
+        <div className="-mt-50">
           <LineNumbers />
         </div>
 
@@ -83,7 +86,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Header />
         </div>
 
-        <main className="mt-20 min-h-screen md:pl-12 relative p-2">
+        <main className="mt-50 min-h-screen md:pl-12 relative p-2">
           {children}
         </main>
       </body>

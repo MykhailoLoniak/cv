@@ -56,6 +56,11 @@ export const CertificatesCarousel = () => {
 
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
+
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
   }, [emblaApi, onSelect]);
 
   return (
@@ -79,19 +84,19 @@ export const CertificatesCarousel = () => {
               >
                 <Image
                   src={certificate.image}
-                  alt={`Сертифікат ${certificate.title}`}
+                  alt={`Certificate ${certificate.title}`}
                   width={1059}
                   height={1050}
                   className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
                 />
 
                 <div className="p-4">
-                  <h2 className="font-mono text-sm text-neutral-200">
+                  <h3 className="font-mono text-sm text-neutral-200">
                     {certificate.title}
-                  </h2>
+                  </h3>
 
                   <span className="mt-2 block font-mono text-xs text-neutral-500">
-                    Переглянути сертифікат →
+                    View certificate →
                   </span>
                 </div>
               </a>
@@ -104,7 +109,7 @@ export const CertificatesCarousel = () => {
         <button
           type="button"
           onClick={scrollPrev}
-          aria-label="Попередній сертифікат"
+          aria-label="Prev certificate"
           className="
             flex size-11 items-center justify-center rounded-md
             border border-neutral-700 font-mono text-xl
@@ -121,7 +126,7 @@ export const CertificatesCarousel = () => {
               key={index}
               onClick={() => scrollTo(index)}
               type="button"
-              aria-label={`Перейти до слайда ${index + 1}`}
+              aria-label={`Go to slide ${index + 1}`}
               className={`h-2 transition-all duration-300 rounded-full ${
                 index === selectedIndex
                   ? "w-8 bg-orange-400"
@@ -134,7 +139,7 @@ export const CertificatesCarousel = () => {
         <button
           type="button"
           onClick={scrollNext}
-          aria-label="Наступний сертифікат"
+          aria-label="Next certificate"
           className="
             flex size-11 items-center justify-center rounded-md
             border border-neutral-700 font-mono text-xl
