@@ -53,7 +53,7 @@ export const Projects = () => {
           </div>
         </article>
       ))}
-      <div className="mt-10 md:-ml-5">
+      <div className="mt-10 md:-mx-10">
         <Line color="var(--custom-neutral)" />
       </div>
     </section>

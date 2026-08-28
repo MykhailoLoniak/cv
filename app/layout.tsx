@@ -75,18 +75,18 @@ export default function RootLayout({ children }: RootLayoutProps) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
-      <body className="relative min-h-screen max-w-7xl">
+      <body className="relative min-h-screen max-w-7xl m-auto">
         <BackendWaker />
 
-        <div className="-mt-50">
+        <div className="fixed top-0 bottom-0 left-0 z-2">
           <LineNumbers />
         </div>
 
-        <div className="fixed top-0 right-0 md:left-11 left-0 z-99 bg-[var(--background)]">
+        <div className="fixed top-0 right-0 left-0 md:px-10 z-1 bg-[var(--background)]">
           <Header />
         </div>
 
-        <main className="mt-50 min-h-screen md:pl-12 relative p-2">
+        <main className="mt-10 h-full ms-4  md:px-10 md:ms-[28px] relative p-2 w-[calc(100%-28px)]">
           {children}
         </main>
       </body>

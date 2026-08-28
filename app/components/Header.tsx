@@ -86,7 +86,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between items-center p-4 min-h-min w-full relative z-50">
+      <header className="flex justify-between items-center p-4 min-h-min w-full relative max-w-7xl m-auto md:ps-10">
         <p className="text-custom-white">Hi, I&apos;m Mykhailo Loniak.</p>
 
         <nav
@@ -120,7 +120,7 @@ const Header = () => {
           <span aria-hidden="true" className="text-green-500 animate-pulse">
             &#9673;
           </span>
-          Available for workemblaApi
+          Available for work
         </Link>
 
         <button
@@ -162,7 +162,9 @@ const Header = () => {
         </nav>
       )}
 
-      <Line color="var(--custom-neutral)" />
+      <div className="md:-mx-10">
+        <Line color="var(--custom-neutral)" w="100%" />
+      </div>
     </>
   );
 };

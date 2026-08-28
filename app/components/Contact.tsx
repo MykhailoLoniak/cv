@@ -59,10 +59,6 @@ export const Contact = () => {
           </a>
         </div>
       </div>
-
-      <div className="mt-10 md:-ml-5">
-        <Line color="var(--custom-neutral)" />
-      </div>
     </section>
   );
 };

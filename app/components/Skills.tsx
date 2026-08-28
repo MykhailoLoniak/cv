@@ -28,8 +28,8 @@ export const Skills = () => {
         </pre>
       </div>
 
-      <div className="mt-10 md:-ml-5">
-        <Line color="var(--custom-neutral)" />
+      <div className="mt-10 md:-mx-10">
+        <Line color="var(--custom-neutral)" w="100%" />
       </div>
     </section>
   );
