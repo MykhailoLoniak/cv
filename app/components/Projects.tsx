@@ -39,12 +39,12 @@ export const Projects = () => {
             />
           </div>
 
-          <div className="flex flex-wrap gap-2 mt-10">
+          <div className="flex flex-wrap gap-2 mt-2">
             {p.links.map((l) => (
               <Link
                 key={l.link}
                 target="_blank"
-                className="flex gap-2 border px-2 py-1 rounded-md items-center"
+                className="flex gap-2 border border-custom-neutral hover:border-white  px-2 py-1 rounded-md items-center"
                 href={l.link}
               >
                 {l.name} <FaExternalLinkAlt />

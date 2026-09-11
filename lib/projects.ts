@@ -39,4 +39,30 @@ export const projects = [
       },
     ],
   },
+  {
+    id: "smart-service",
+    src: "/screen/smart-service.webp",
+    name: "Smart Service",
+    description:
+      "SmartServe is a full-stack restaurant automation platform for managing menus, QR-code orders, kitchen workflows, staff roles, and sales analytics through dedicated dashboards. Built with Next.js, TypeScript, Prisma, PostgreSQL, and deployed on Vercel.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Node.js",
+      "Prisma ORM",
+      "PostgreSQL",
+    ],
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/MykhailoLoniak/SmartServe",
+      },
+      {
+        name: "Live demo",
+        link: "https://smart-serve-eta.vercel.app",
+      },
+    ],
+  },
 ] satisfies Project[];
