@@ -65,4 +65,22 @@ export const projects = [
       },
     ],
   },
+  {
+    id: "breweries",
+    src: "/screen/breweries.webp",
+    name: "Brewery Explorer",
+    description:
+      "Brewery Explorer is a responsive application for browsing breweries from the Open Brewery DB API, featuring a virtualized list, bidirectional infinite scrolling, brewery selection and deletion, and detailed brewery pages.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Axios"],
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/MykhailoLoniak/Breweries",
+      },
+      {
+        name: "Live demo",
+        link: "https://breweries-app-three.vercel.app",
+      },
+    ],
+  },
 ] satisfies Project[];
