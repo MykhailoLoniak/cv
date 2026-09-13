@@ -130,4 +130,26 @@ export const projects = [
       },
     ],
   },
+  {
+    id: "hey-boss-api",
+    src: "/screen/hey-boss-api.webp",
+    name: "HeyBoss API",
+    description:
+      "HeyBoss API is a Node.js backend platform connecting employers and independent contractors, with account management, profiles, jobs, team task workflows, reviews, calendars, real-time chat, portfolio uploads, and OAuth authentication.",
+    stack: [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Sequelize",
+      "JWT",
+      "WebSocket",
+      "Jest",
+    ],
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/MykhailoLoniak/nodeJsHeyBoss",
+      },
+    ],
+  },
 ] satisfies Project[];
