@@ -83,4 +83,51 @@ export const projects = [
       },
     ],
   },
+  {
+    id: "phone-catalog",
+    src: "/screen/phone-catalog.webp",
+    name: "Phone Catalog",
+    description:
+      "Phone Catalog is a responsive storefront for browsing phones, tablets, and accessories, featuring catalog filtering, URL-driven sorting and pagination, product variants, favourites, and a persistent shopping cart.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "React Router",
+      "Sass",
+      "Vitest",
+    ],
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/MykhailoLoniak/react_phone-catalog",
+      },
+      {
+        name: "Live demo",
+        link: "https://mykhailoloniak.github.io/react_phone-catalog/",
+      },
+    ],
+  },
+  {
+    id: "news-bot",
+    src: "/screen/news-bot.webp",
+    name: "News Bot",
+    description:
+      "News Bot is a privacy-conscious multi-user Telegram bot that collects trusted RSS news, generates grounded Ukrainian summaries with Gemini, and reliably delivers them to subscribers with deduplication and persistent storage.",
+    stack: [
+      "Node.js",
+      "Telegraf",
+      "Gemini API",
+      "SQLite",
+      "Zod",
+      "Vitest",
+      "Docker",
+    ],
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/MykhailoLoniak/news-bot",
+      },
+    ],
+  },
 ] satisfies Project[];
